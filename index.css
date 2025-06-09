@@ -64,7 +64,7 @@ body {
 
 /* Sección de bienvenida */
 .welcome-section {
-    background-image: url('/sources/pexels-sathez994-698808.jpg'); 
+    background-image: url('pexels-sathez994-698808.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
