@@ -72,6 +72,7 @@ body {
     padding: 60px 20px; 
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
     margin-top: 80px;
+    text-align: center;
     position: relative;
 }
 
