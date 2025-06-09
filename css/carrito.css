@@ -63,7 +63,7 @@ body {
 
 /* Main Content */
 main {
-    padding-top: 120px; /* Espacio para el header fijo */
+    padding-top: 120px; 
     flex-grow: 1;
     width: 100%;
 }

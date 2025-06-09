@@ -7,7 +7,7 @@ body {
     color: #333;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;  /* Esto asegura que el contenido ocupe toda la altura de la ventana */
+    min-height: 100vh;
 }
 
 /* Header */
@@ -16,16 +16,16 @@ body {
     color: white;
     padding: 20px;
     text-align: center;
-    position: fixed; /* Fijamos el header */
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-    transition: transform 0.3s ease-in-out; /* Transición suave para ocultar el header */
+    transition: transform 0.3s ease-in-out; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Ocultar el header cuando se hace scroll hacia abajo */
+
 .site-header.hide {
     transform: translateY(-100%);
 }
@@ -35,7 +35,7 @@ body {
 }
 
 .site-header .logo {
-    width: 150px; /* Tamaño del logo */
+    width: 150px; 
     height: auto;
 }
 
@@ -64,46 +64,44 @@ body {
 
 /* Sección de bienvenida */
 .welcome-section {
-    background-image: url('/sources/pexels-sathez994-698808.jpg'); /* Fondo de imagen */
+    background-image: url('/sources/pexels-sathez994-698808.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: white;
-    padding: 60px 20px; /* Espaciado alrededor del texto */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
-    text-align: center;
-    margin-top: 80px; /* Margen superior para evitar que el header cubra la sección */
+    padding: 60px 20px; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+    margin-top: 80px;
     position: relative;
 }
 
 .welcome-section::before {
-    content: ''; /* Crea un pseudo-elemento */
+    content: ''; 
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro con opacidad */
-    z-index: -1; /* Asegura que el fondo esté detrás del texto */
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: -1; 
 }
 
 h1 {
-    color: #ffffff; /* Blanco para el título */
+    color: #ffffff; 
     font-size: 2.5em;
-    font-family: 'Lora', serif; /* Fuente elegante para el título */
-    margin-bottom: 10px; /* Espacio entre el título y el párrafo */
+    font-family: 'Lora', serif; 
 }
 
 p {
     font-size: 1.2em;
-    line-height: 1.5; /* Aumenta la altura de la línea para facilitar la lectura */
+    line-height: 1.5; 
 }
 
 /* Sección de productos */
 .product-section {
     padding: 20px;
     background-color: white;
-    flex-grow: 1; /* Esto asegura que esta sección ocupe el espacio restante, empujando el footer hacia abajo */
+    flex-grow: 1; 
 }
 
 /* Título de productos */
@@ -111,7 +109,7 @@ p {
     text-align: center;
     color: #007bff;
     margin-bottom: 30px;
-    font-family: 'Montserrat', sans-serif; /* Fuente moderna para los encabezados */
+    font-family: 'Montserrat', sans-serif; 
     font-size: 2em;
     font-weight: 700;
 }
@@ -119,12 +117,12 @@ p {
 /* Contenedor de productos */
 .product-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Flexibilidad para las tarjetas */
-    gap: 30px; /* Espaciado entre los contenedores de productos */
-    justify-items: center; /* Centra las tarjetas */
-    align-items: start; /* Asegura que las tarjetas se alineen arriba del contenedor */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 30px;
+    justify-items: center; 
+    align-items: start; 
     max-width: 1200px;
-    margin: 0 auto; /* Centra el contenedor en la pantalla */
+    margin: 0 auto;
 }
 
 /* Tarjeta de producto */
@@ -136,9 +134,9 @@ p {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
-    max-width: 220px; /* Limitar el tamaño de la tarjeta */
+    max-width: 220px;
     opacity: 0;
-    animation: fadeIn 0.5s forwards; /* Animación de entrada */
+    animation: fadeIn 0.5s forwards; 
 }
 
 .product-card img {
@@ -150,7 +148,7 @@ p {
     color: #333;
     font-size: 1.2em;
     margin: 10px 0;
-    font-family: 'Roboto', sans-serif; /* Fuente para el nombre del producto */
+    font-family: 'Roboto', sans-serif; 
 }
 
 .product-card .price {
@@ -175,7 +173,7 @@ p {
 
 .product-card button:hover {
     background-color: #0056b3;
-    transform: translateY(-2px); /* Efecto de elevación */
+    transform: translateY(-2px); 
 }
 
 /* Animación de entrada para las tarjetas de producto */
@@ -207,23 +205,23 @@ footer {
     width: 100%;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
-    margin-top: 20px; /* Separar footer de la sección de productos */
+    margin-top: 20px;
 }
 
 /* Espaciado entre productos y footer */
 .product-section {
-    margin-bottom: 50px; /* Espacio para evitar que el footer se superponga */
+    margin-bottom: 50px; 
 }
 
 /* Estilos del popup */
 .popup {
-    display: none; /* Inicialmente el popup está oculto */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
     z-index: 1001;
@@ -239,7 +237,7 @@ footer {
 
 .popup-message {
     font-size: 1.2em;
-    color: #333; /* Aseguramos que el texto sea oscuro */
+    color: #333; 
     margin-bottom: 20px;
 }
 
