@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Tienda Online</title>
+    <link rel="stylesheet" href="/css/carrito.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Lora:wght@500&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="/sources/RShop.jpg" alt="Logo Tienda Online" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/pages/index.html#nosotros">Nosotros</a></li>
+                <li><a href="/pages/index.html#productos">Productos</a></li>
+                <li><a href="/pages/carrito.html"">Carrito</a> <!-- Link al carrito -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main role="main">
+        <!-- Sección de carrito -->
+        <section class="cart-section">
+            <h2>Tu Carrito</h2>
+            <div id="cart-items"></div> <!-- Aquí se mostrarán los productos añadidos -->
+            <p id="total-price">Total: $0</p>
+            <button id="pay-btn">Pagar</button> <!-- Botón de pago -->
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <p>&copy; 2025 Rojano Shop. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Pop Up para confirmación de pago -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="popup-close" class="popup-close">&times;</span>
+            <p id="popup-message">Pago completado</p>
+            <button id="popup-ok" class="popup-ok">Aceptar</button>
+        </div>
+    </div>
+
+    <script src="/Javascript/carrito.js"></script>
+</body>
+</html>

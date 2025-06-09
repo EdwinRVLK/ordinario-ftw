@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Tienda Online</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Lora:wght@500&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="/sources/RShop.jpg" alt="Logo Tienda Online" class="logo">
+        </div>
+        <nav role="navigation">
+            <ul>
+                <li><a href="#bienvenida" title="Ir a la sección de Nosotros" aria-label="Ir a la sección Nosotros">Nosotros</a></li>
+                <li><a href="#productos" title="Ver productos destacados" aria-label="Ver productos destacados">Productos</a></li>
+                <li><a href="/pages/carrito.html" title="Ver carrito de compras" aria-label="Ir al carrito de compras">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main role="main">
+        <!-- Sección de bienvenida -->
+        <section class="welcome-section" id="bienvenida">
+            <h1>Bienvenido a Rojano Shop</h1>
+            <p>Descubre nuestros productos más populares.</p>
+            <p>En Rojano Shop, ofrecemos una amplia gama de productos tecnológicos de alta calidad. Desde dispositivos móviles, computadoras portátiles, hasta accesorios innovadores, tenemos todo lo que necesitas para estar al día con la tecnología. ¡Explora nuestras ofertas y encuentra lo mejor de la tecnología!</p>
+        </section>
+
+        <!-- Sección de productos -->
+        <section class="product-section" id="productos">
+            <h2>Productos Destacados</h2>
+            <div class="product-container">
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <img src="/sources/Productos/samsungS24.jpg" alt="Samsung Galaxy S24" >
+                    <h3>Samsung S24</h3>
+                    <p class="price">$459.5</p>
+                    <button aria-label="Añadir Samsung S24 al carrito" onclick="addToCart('Samsung S24', 459.5, '/sources/Productos/samsungS24.jpg')">Añadir al carrito</button>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <img src="/sources/Productos/iphone14.jpg" alt="Iphone 14" >
+                    <h3>Iphone 14</h3>
+                    <p class="price">$620</p>
+                    <button aria-label="Añadir Iphone 14 al carrito" onclick="addToCart('Iphone 14', 620, '/sources/Productos/iphone14.jpg')">Añadir al carrito</button>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="product-card">
+                    <img src="/sources/Productos/huaweiMate.png" alt="Huawei Mate X6" >
+                    <h3>Huawei Mate X6</h3>
+                    <p class="price">$399</p>
+                    <button aria-label="Añadir Huawei Mate X6 al carrito" onclick="addToCart('Huawei Mate X6', 399, '/sources/Productos/huaweiMate.png')">Añadir al carrito</button>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="product-card">
+                    <img src="/sources/Productos/Red14C.webp" alt="Redmi Note 11" >
+                    <h3>Redmi Note 11</h3>
+                    <p class="price">$800</p>
+                    <button aria-label="Añadir Redmi Note 11 al carrito" onclick="addToCart('Redmi Note 11', 800, '/sources/Productos/Red14C.webp')">Añadir al carrito</button>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="product-card">
+                    <img src="/sources/Productos/TufF15.webp" alt="Asus Tuf F15" >
+                    <h3>Asus Tuf F15</h3>
+                    <p class="price">$1200</p>
+                    <button aria-label="Añadir Asus Tud F15 al carrito" onclick="addToCart('Asus Tuf F15', 1200, '/sources/Productos/TufF15.webp')">Añadir al carrito</button>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="product-card">
+                    <img src="/sources/Productos/Nitro 5.avif" alt="Acer Nitro 5" >
+                    <h3>Acer Nitro 5</h3>
+                    <p class="price">$999</p>
+                    <button aria-label="Añadir Acer Nitro 5 al carrito" onclick="addToCart('Acer Nitro 5', 999, '/sources/Productos/Nitro 5.avif')">Añadir al carrito</button>
+                </div>
+
+                <!-- Producto 7 -->
+                <div class="product-card">
+                    <img src="/sources/Productos/omen14.webp" alt="HP Omen 14" >
+                    <h3>HP Omen 14</h3>
+                    <p class="price">$159</p>
+                    <button aria-label="Añadir HP Omen 14 al carrito" onclick="addToCart('HP Omen 14', 159, '/sources/Productos/omen14.webp')">Añadir al carrito</button>
+                </div>
+
+                <!-- Producto 8 -->
+                <div class="product-card">
+                    <img src="/sources/Productos/AsusRog.avif" alt="Asus Rog Strix" >
+                    <h3>Asus Rog Strix</h3>
+                    <p class="price">$680</p>
+                    <button aria-label="Añadir Asus Rog Stric al carrito" onclick="addToCart('Asus Rog Strix', 680, '/sources/Productos/AsusRog.avif')">Añadir al carrito</button>
+                </div>
+
+                <!-- Producto 9 -->
+                <div class="product-card">
+                    <img src="/sources/Productos/airpods2.webp" alt="Airpods 2da gen">
+                    <h3>Airpods 2da gen</h3>
+                    <p class="price">$1200</p>
+                    <button aria-label="Añadir Airpods 2da genereación al carrito" onclick="addToCart('Airpods 2da gen', 1200, '/sources/Productos/airpods2.webp')">Añadir al carrito</button>
+                </div>
+
+                <!-- Producto 10 -->
+                <div class="product-card">
+                    <img src="/sources/Productos/smsW7.avif" alt="Samsung Watch 7" >
+                    <h3>Samsung Watch 7</h3>
+                    <p class="price">$999</p>
+                    <button aria-label="Añadir Samsung watch 7 al carrito" onclick="addToCart('Samsung Watch 7', 999, '/sources/Productos/smsW7.avif')">Añadir al carrito</button>
+                </div>
+
+                <!-- Producto 11 -->
+                <div class="product-card">
+                    <img src="/sources/Productos/budsFe.avif" alt="Samsung Buds Fe" >
+                    <h3>Samsung Buds Fe</h3>
+                    <p class="price">$159</p>
+                    <button aria-label="Añadir Samsung buds Fe al carrito" onclick="addToCart('Samsung Buds Fe', 159, '/sources/Productos/budsFe.avif')">Añadir al carrito</button>
+                </div>
+
+                <!-- Producto 12 -->
+                <div class="product-card">
+                    <img src="/sources/Productos/appleWs10.png" alt="Apple watch 10" >
+                    <h3>Apple watch 10</h3>
+                    <p class="price">$680</p>
+                    <button aria-label="Añadir Apple watch 10 al carrito" onclick="addToCart('Apple watch 10', 680, '/sources/Productos/appleWs10.png')">Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="popup" class="popup" aria-live="assertive" tabindex="-1">
+            <div class="popup-content">
+                <span id="popup-close" class="popup-close" aria-label="Cerrar popup" onclick="closePopup()">&times;</span>
+                <p id="popup-message">Artículo agregado</p>
+                <button aria-label="Aceptar artículo agregado correctamente" id="popup-ok" class="popup-ok" onclick="closePopup()">Aceptar</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <p>&copy; 2025 Rojano Shop. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/Javascript/index.js"></script>
+
+</body>
+</html>

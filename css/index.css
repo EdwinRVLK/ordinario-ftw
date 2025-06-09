@@ -1,0 +1,289 @@
+/* Estilos Generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Esto asegura que el contenido ocupe toda la altura de la ventana */
+}
+
+/* Header */
+.site-header {
+    background-color: #fdfdfd;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed; /* Fijamos el header */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out; /* Transición suave para ocultar el header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ocultar el header cuando se hace scroll hacia abajo */
+.site-header.hide {
+    transform: translateY(-100%);
+}
+
+.site-header .logo-container {
+    margin-bottom: 10px;
+}
+
+.site-header .logo {
+    width: 150px; /* Tamaño del logo */
+    height: auto;
+}
+
+.site-header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.site-header nav ul li a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.site-header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sección de bienvenida */
+.welcome-section {
+    background-image: url('/sources/pexels-sathez994-698808.jpg'); /* Fondo de imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    padding: 60px 20px; /* Espaciado alrededor del texto */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+    text-align: center;
+    margin-top: 80px; /* Margen superior para evitar que el header cubra la sección */
+    position: relative;
+}
+
+.welcome-section::before {
+    content: ''; /* Crea un pseudo-elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro con opacidad */
+    z-index: -1; /* Asegura que el fondo esté detrás del texto */
+}
+
+h1 {
+    color: #ffffff; /* Blanco para el título */
+    font-size: 2.5em;
+    font-family: 'Lora', serif; /* Fuente elegante para el título */
+    margin-bottom: 10px; /* Espacio entre el título y el párrafo */
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5; /* Aumenta la altura de la línea para facilitar la lectura */
+}
+
+/* Sección de productos */
+.product-section {
+    padding: 20px;
+    background-color: white;
+    flex-grow: 1; /* Esto asegura que esta sección ocupe el espacio restante, empujando el footer hacia abajo */
+}
+
+/* Título de productos */
+.product-section h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif; /* Fuente moderna para los encabezados */
+    font-size: 2em;
+    font-weight: 700;
+}
+
+/* Contenedor de productos */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Flexibilidad para las tarjetas */
+    gap: 30px; /* Espaciado entre los contenedores de productos */
+    justify-items: center; /* Centra las tarjetas */
+    align-items: start; /* Asegura que las tarjetas se alineen arriba del contenedor */
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+}
+
+/* Tarjeta de producto */
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 220px; /* Limitar el tamaño de la tarjeta */
+    opacity: 0;
+    animation: fadeIn 0.5s forwards; /* Animación de entrada */
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    color: #333;
+    font-size: 1.2em;
+    margin: 10px 0;
+    font-family: 'Roboto', sans-serif; /* Fuente para el nombre del producto */
+}
+
+.product-card .price {
+    font-size: 1.5em;
+    color: #007bff;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.product-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.product-card button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Animación de entrada para las tarjetas de producto */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effect for product cards */
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px; /* Separar footer de la sección de productos */
+}
+
+/* Espaciado entre productos y footer */
+.product-section {
+    margin-bottom: 50px; /* Espacio para evitar que el footer se superponga */
+}
+
+/* Estilos del popup */
+.popup {
+    display: none; /* Inicialmente el popup está oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.popup-message {
+    font-size: 1.2em;
+    color: #333; /* Aseguramos que el texto sea oscuro */
+    margin-bottom: 20px;
+}
+
+.popup-ok {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.popup-ok:hover {
+    background-color: #0056b3;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+}
+
+.popup-close:hover {
+    color: #007bff;
+}
+
+/* Animación de entrada para las tarjetas de producto */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effect for product cards */
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
